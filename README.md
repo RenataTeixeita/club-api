@@ -1,24 +1,8 @@
-# README
+# Club API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Eu aredito que para aprender uma nova linguagem é necessário, além de estudar as documentações, realizar um projeto para aplicar os aprendizados. Com esse obejtivo, neste projeto desenvolvi uma CRUD API de um clube de esportes em Ruby, utilizando o framework Rails.
 
-Things you may want to cover:
+## Referência
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - [Getting Started with Rails](https://guides.rubyonrails.org/v3.2/getting_started.html)
+ - [Como criar um CRUD completo com Rails](https://www.devmedia.com.br/como-criar-um-crud-completo-com-rails/33986)
