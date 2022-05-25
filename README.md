@@ -42,12 +42,6 @@ Neste projeto desenvolvi uma CRUD API de um clube de esportes em [Ruby](https://
 | :---------- | :--------- | :------------------------------------------ |
 | `id`      | `string` | **Obrigatório**. O ID do item que você quer |
 
-## Referência
-
- - [Getting Started with Rails](https://guides.rubyonrails.org/v3.2/getting_started.html)
- - [Como criar um CRUD completo com Rails](https://www.devmedia.com.br/como-criar-um-crud-completo-com-rails/33986)
- 
-
 
 ## Instalação
 
@@ -65,3 +59,9 @@ Digite no terminal
   rails server
 ```
 Agora você pode testar no [Thunder Client](https://www.thunderclient.com/) ou [Insomnia](https://insomnia.rest/download).
+
+## Referência
+
+ - [Getting Started with Rails](https://guides.rubyonrails.org/v3.2/getting_started.html)
+ - [Como criar um CRUD completo com Rails](https://www.devmedia.com.br/como-criar-um-crud-completo-com-rails/33986)
+ 
