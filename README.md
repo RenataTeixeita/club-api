@@ -8,7 +8,7 @@ Neste projeto desenvolvi uma CRUD API de um clube de esportes em [Ruby](https://
 #### Retorna todos os itens
 
 ```http
-  POST /users
+  POST /api/v1/users
 ```
 
 | Parâmetro   | Tipo       | Descrição                           |
@@ -35,7 +35,7 @@ Neste projeto desenvolvi uma CRUD API de um clube de esportes em [Ruby](https://
 ```
 
 ```http
-  GET users/${id}
+  GET /api/v1/users/${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
