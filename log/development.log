@@ -2084,3 +2084,110 @@ Processing by UsersController#show as */*
 Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 2379)
 
 
+Started POST "/users" for 127.0.0.1 at 2022-05-25 10:20:21 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-05-25 10:20:31 -0300
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"name"=>"Ana Maria da Silva", "email"=>"aninha.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua Alagos, 3, Algum Bairro, Vila Velha - ES", "phone"=>"27999999999", "user"=>{"name"=>"Ana Maria da Silva", "email"=>"aninha.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua Alagos, 3, Algum Bairro, Vila Velha - ES", "phone"=>"27999999999"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:22:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "address", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ana Maria da Silva"], ["email", "aninha.email.com.br"], ["password", "123456789"], ["address", "Rua Alagos, 3, Algum Bairro, Vila Velha - ES"], ["phone", "27999999999"], ["created_at", "2022-05-25 13:20:31.193142"], ["updated_at", "2022-05-25 13:20:31.193142"]]
+  ↳ app/controllers/api/v1/users_controller.rb:22:in `create'
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:22:in `create'
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 6.0ms | Allocations: 39147)
+
+
+  
+NoMethodError (undefined method `user_url' for #<Api::V1::UsersController:0x0000564de3cc7a90>):
+  
+app/controllers/api/v1/users_controller.rb:23:in `create'
+Started POST "/api/V1/users" for 127.0.0.1 at 2022-05-25 10:22:36 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/api/V1/users"):
+  
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-05-25 10:23:17 -0300
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"name"=>"Ana Maria da Silva", "email"=>"aninha.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua Alagos, 3, Algum Bairro, Vila Velha - ES", "phone"=>"27999999999", "user"=>{"name"=>"Ana Maria da Silva", "email"=>"aninha.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua Alagos, 3, Algum Bairro, Vila Velha - ES", "phone"=>"27999999999"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:22:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "address", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ana Maria da Silva"], ["email", "aninha.email.com.br"], ["password", "123456789"], ["address", "Rua Alagos, 3, Algum Bairro, Vila Velha - ES"], ["phone", "27999999999"], ["created_at", "2022-05-25 13:23:17.980679"], ["updated_at", "2022-05-25 13:23:17.980679"]]
+  ↳ app/controllers/api/v1/users_controller.rb:22:in `create'
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:22:in `create'
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 6.0ms | Allocations: 34567)
+
+
+  
+NoMethodError (undefined method `user_url' for #<Api::V1::UsersController:0x00007f4fa5d34d38>):
+  
+app/controllers/api/v1/users_controller.rb:23:in `create'
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-05-25 10:30:27 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"name"=>"Cloves Andrade", "email"=>"cloves.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua Alvarenga, 3, Algum Bairro, Ouro Preto - MG", "phone"=>"31999999999", "user"=>{"name"=>"Cloves Andrade", "email"=>"cloves.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua Alvarenga, 3, Algum Bairro, Ouro Preto - MG", "phone"=>"31999999999"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:22:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "address", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cloves Andrade"], ["email", "cloves.email.com.br"], ["password", "123456789"], ["address", "Rua Alvarenga, 3, Algum Bairro, Ouro Preto - MG"], ["phone", "31999999999"], ["created_at", "2022-05-25 13:30:27.070874"], ["updated_at", "2022-05-25 13:30:27.070874"]]
+  ↳ app/controllers/api/v1/users_controller.rb:22:in `create'
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:22:in `create'
+Completed 201 Created in 16ms (Views: 0.3ms | ActiveRecord: 4.7ms | Allocations: 7814)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2022-05-25 10:30:38 -0300
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"name"=>"Cloves Andrade", "email"=>"cloves.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua Alvarenga, 3, Algum Bairro, Ouro Preto - MG", "phone"=>"31999999999", "user"=>{"name"=>"Cloves Andrade", "email"=>"cloves.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua Alvarenga, 3, Algum Bairro, Ouro Preto - MG", "phone"=>"31999999999"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 2026)
+
+
