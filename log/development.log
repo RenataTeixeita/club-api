@@ -2062,3 +2062,25 @@ Processing by SportsController#create as */*
 Completed 201 Created in 32ms (Views: 0.6ms | ActiveRecord: 5.9ms | Allocations: 6583)
 
 
+Started POST "/users" for 127.0.0.1 at 2022-05-25 01:25:09 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Renata Teixeira Mendes", "email"=>"renata.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"Renata Teixeira Mendes", "email"=>"renata.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "address", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Renata Teixeira Mendes"], ["email", "renata.email.com.br"], ["password", "123456789"], ["address", "Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ"], ["phone", "21999999999"], ["created_at", "2022-05-25 04:25:09.958427"], ["updated_at", "2022-05-25 04:25:09.958427"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 20ms (Views: 0.6ms | ActiveRecord: 6.9ms | Allocations: 9138)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2022-05-25 01:29:44 -0300
+Processing by UsersController#show as */*
+  Parameters: {"name"=>"Renata Teixeira Mendes", "email"=>"renata.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "id"=>"2", "user"=>{"name"=>"Renata Teixeira Mendes", "email"=>"renata.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 2379)
+
+
