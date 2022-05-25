@@ -1,60 +1,41 @@
 class SportsController < ApplicationController
-  before_action :set_sport, only: %i[ show edit update destroy ]
+  before_action :set_sport, only: [:show, :update, :destroy]
 
   # GET /sports or /sports.json
   def index
     @sports = Sport.all
+
+    render json: @sports
   end
 
   # GET /sports/1 or /sports/1.json
   def show
-  end
-
-  # GET /sports/new
-  def new
-    @sport = Sport.new
-  end
-
-  # GET /sports/1/edit
-  def edit
+    render json: @sport
   end
 
   # POST /sports or /sports.json
   def create
     @sport = Sport.new(sport_params)
 
-    respond_to do |format|
-      if @sport.save
-        format.html { redirect_to sport_url(@sport), notice: "Sport was successfully created." }
-        format.json { render :show, status: :created, location: @sport }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @sport.errors, status: :unprocessable_entity }
-      end
+    if @sport.save
+      render json: @sport, status: :created, location: @sport
+    else
+      render json: @sport.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /sports/1 or /sports/1.json
   def update
-    respond_to do |format|
-      if @sport.update(sport_params)
-        format.html { redirect_to sport_url(@sport), notice: "Sport was successfully updated." }
-        format.json { render :show, status: :ok, location: @sport }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @sport.errors, status: :unprocessable_entity }
-      end
+    if @sport.update(sport_params)
+      render json: @sport
+    else
+      render json: @sport.errors, status: :unprocessable_entity
     end
   end
 
   # DELETE /sports/1 or /sports/1.json
   def destroy
     @sport.destroy
-
-    respond_to do |format|
-      format.html { redirect_to sports_url, notice: "Sport was successfully destroyed." }
-      format.json { head :no_content }
-    end
   end
 
   private
