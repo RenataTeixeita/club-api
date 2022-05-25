@@ -37,6 +37,6 @@ ActiveRecord::Schema.define(version: 2022_05_24_172552) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key :teams, :sports, column: :sportId_id
-  add_foreign_key :teams, :users, column: :userId_id
+  add_foreign_key "teams", "sports", column: "sportId_id"
+  add_foreign_key "teams", "users", column: "userId_id"
 end

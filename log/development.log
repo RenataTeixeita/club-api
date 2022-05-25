@@ -253,3 +253,1790 @@ FOREIGN KEY ("userId_id")
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "fe55b46f3371fd2de42ce56396ed6ea08d1dafdb"], ["created_at", "2022-05-24 18:57:06.938396"], ["updated_at", "2022-05-24 18:57:06.938396"]]
   [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/club-api" for ::1 at 2022-05-24 18:02:39 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/club-api"):
+  
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2022-05-24 18:08:35 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:15
+  Rendered teams/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1377)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 617ms (ActiveRecord: 0.4ms | Allocations: 30114)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for ::1 at 2022-05-24 18:08:46 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1362)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 544ms (ActiveRecord: 0.5ms | Allocations: 7344)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2022-05-24 18:39:08 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as */*
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 992)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 513ms (ActiveRecord: 0.1ms | Allocations: 6825)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started POST "/users" for 127.0.0.1 at 2022-05-24 18:39:18 -0300
+Processing by UsersController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 428)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.5) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.5) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.5) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.5) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.5) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2022-05-24 18:40:46 -0300
+Processing by UsersController#new as */*
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 12.3ms | Allocations: 7427)
+  Rendered users/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 7798)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 529ms (ActiveRecord: 0.3ms | Allocations: 17246)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users/new" for 127.0.0.1 at 2022-05-24 18:45:49 -0300
+Processing by UsersController#new as */*
+  Parameters: {"name"=>"Renata Teixeira Mendes", "email"=>"renata.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"Renata Teixeira Mendes", "email"=>"renata.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.4ms | Allocations: 1568)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1659)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 535ms (ActiveRecord: 0.0ms | Allocations: 6777)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2022-05-24 18:46:48 -0300
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"Renata Teixeira Mendes", "email"=>"renata.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"Renata Teixeira Mendes", "email"=>"renata.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 650)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 543ms (ActiveRecord: 0.3ms | Allocations: 5778)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2022-05-24 18:47:09 -0300
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"Renata Teixeira Mendes", "email"=>"renata.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"Renata Teixeira Mendes", "email"=>"renata.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 648)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 516ms (ActiveRecord: 0.2ms | Allocations: 5776)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users/new" for 127.0.0.1 at 2022-05-24 18:47:17 -0300
+Processing by UsersController#new as */*
+  Parameters: {"name"=>"Renata Teixeira Mendes", "email"=>"renata.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"Renata Teixeira Mendes", "email"=>"renata.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.9ms | Allocations: 1568)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1659)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 554ms (ActiveRecord: 0.0ms | Allocations: 6783)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/sports" for 127.0.0.1 at 2022-05-24 18:55:35 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SportsController#index as */*
+  Rendering sports/index.html.erb within layouts/application
+  [1m[36mSport Load (0.1ms)[0m  [1m[34mSELECT "sports".* FROM "sports"[0m
+  ↳ app/views/sports/index.html.erb:14
+  Rendered sports/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1363)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 527ms (ActiveRecord: 0.3ms | Allocations: 13513)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/sports" for 127.0.0.1 at 2022-05-24 18:58:27 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SportsController#index as */*
+  Rendering sports/index.html.erb within layouts/application
+  [1m[36mSport Load (0.2ms)[0m  [1m[34mSELECT "sports".* FROM "sports"[0m
+  ↳ app/views/sports/index.html.erb:14
+  Rendered sports/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1364)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms | Allocations: 10392)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/sports" for 127.0.0.1 at 2022-05-24 19:04:05 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SportsController#index as */*
+  Rendering sports/index.html.erb within layouts/application
+  [1m[36mSport Load (0.1ms)[0m  [1m[34mSELECT "sports".* FROM "sports"[0m
+  ↳ app/views/sports/index.html.erb:14
+  Rendered sports/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1364)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 607ms (ActiveRecord: 0.3ms | Allocations: 12556)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/club-api" for ::1 at 2022-05-24 19:05:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/club-api"):
+  
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/club-api" for ::1 at 2022-05-24 19:05:32 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/club-api"):
+  
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/sports" for ::1 at 2022-05-24 19:05:41 -0300
+Processing by SportsController#index as HTML
+  Rendering sports/index.html.erb within layouts/application
+  [1m[36mSport Load (0.1ms)[0m  [1m[34mSELECT "sports".* FROM "sports"[0m
+  ↳ app/views/sports/index.html.erb:14
+  Rendered sports/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 667)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 588ms (ActiveRecord: 0.1ms | Allocations: 5951)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/sports" for ::1 at 2022-05-24 19:12:29 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SportsController#index as HTML
+  Rendering sports/index.html.erb within layouts/application
+  [1m[36mSport Load (0.1ms)[0m  [1m[34mSELECT "sports".* FROM "sports"[0m
+  ↳ app/views/sports/index.html.erb:14
+  Rendered sports/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1363)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 612ms (ActiveRecord: 0.3ms | Allocations: 8304)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/sports" for ::1 at 2022-05-24 19:12:35 -0300
+Processing by SportsController#index as HTML
+  Rendering sports/index.html.erb within layouts/application
+  [1m[36mSport Load (0.2ms)[0m  [1m[34mSELECT "sports".* FROM "sports"[0m
+  ↳ app/views/sports/index.html.erb:14
+  Rendered sports/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 676)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 625ms (ActiveRecord: 0.2ms | Allocations: 4425)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/sports" for 127.0.0.1 at 2022-05-24 19:12:43 -0300
+Processing by SportsController#index as */*
+  Rendering sports/index.html.erb within layouts/application
+  [1m[36mSport Load (0.2ms)[0m  [1m[34mSELECT "sports".* FROM "sports"[0m
+  ↳ app/views/sports/index.html.erb:14
+  Rendered sports/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 657)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 597ms (ActiveRecord: 0.2ms | Allocations: 4577)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/sports" for 127.0.0.1 at 2022-05-24 19:33:33 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SportsController#index as */*
+  Rendering sports/index.html.erb within layouts/application
+  [1m[36mSport Load (0.2ms)[0m  [1m[34mSELECT "sports".* FROM "sports"[0m
+  ↳ app/views/sports/index.html.erb:14
+  Rendered sports/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1364)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 607ms (ActiveRecord: 0.4ms | Allocations: 12782)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/sports" for 127.0.0.1 at 2022-05-24 19:33:55 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SportsController#index as */*
+  Rendering sports/index.html.erb within layouts/application
+  [1m[36mSport Load (0.2ms)[0m  [1m[34mSELECT "sports".* FROM "sports"[0m
+  ↳ app/views/sports/index.html.erb:14
+  Rendered sports/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1364)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.18
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 567ms (ActiveRecord: 0.3ms | Allocations: 8398)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/renata/Ruby/club-api/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/sports" for 127.0.0.1 at 2022-05-24 22:23:13 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SportsController#index as */*
+  Rendering sports/index.html.erb
+  [1m[36mSport Load (0.2ms)[0m  [1m[34mSELECT "sports".* FROM "sports" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered sports/index.html.erb (Duration: 33.2ms | Allocations: 18812)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.4ms | Allocations: 22215)
+
+
+  
+ActionView::Template::Error (undefined method `flash' for #<ActionDispatch::Request:0x000055e23cc93fa0>):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <h1>Sports</h1>
+    4: 
+  
+app/views/sports/index.html.erb:1
+Started GET "/sports" for 127.0.0.1 at 2022-05-24 22:25:10 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SportsController#index as */*
+  Rendering sports/index.html.erb
+  [1m[36mSport Load (0.1ms)[0m  [1m[34mSELECT "sports".* FROM "sports" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered sports/index.html.erb (Duration: 20.3ms | Allocations: 18809)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms | Allocations: 22432)
+
+
+  
+ActionView::Template::Error (undefined method `flash' for #<ActionDispatch::Request:0x00007ff3a4b28870>):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <h1>Sports</h1>
+    4: 
+  
+app/views/sports/index.html.erb:1
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for 127.0.0.1 at 2022-05-24 23:15:53 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.3ms | Allocations: 204)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.5) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.5) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.5) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.5) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2022-05-24 23:22:14 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.5) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.5) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.5) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.5) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2022-05-24 23:34:59 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.3ms | Allocations: 203)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.5) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.5) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.5) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.5) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2022-05-24 23:44:51 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.3ms | Allocations: 203)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.5) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.5) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.5) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.5) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2022-05-24 23:46:08 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.3ms | Allocations: 203)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.5) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.5) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.5) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.5) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2022-05-24 23:50:33 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.2ms | Allocations: 203)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.5) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.5) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.5) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.5) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2022-05-24 23:57:38 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.3ms | Allocations: 203)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.5) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.5) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.5) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.5) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2022-05-24 23:59:46 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.3ms | Allocations: 203)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.5) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.5) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.5) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.5) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:04:08 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms | Allocations: 17027)
+
+
+  
+NoMethodError (undefined method `flash=' for #<ActionDispatch::Request:0x000055add415f900>):
+  
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:167:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.5) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.5) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.5) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.5) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+actiontext (6.0.5) lib/action_text/rendering.rb:19:in `with_renderer'
+actiontext (6.0.5) lib/action_text/engine.rb:55:in `block (4 levels) in <class:Engine>'
+activesupport (6.0.5) lib/active_support/callbacks.rb:121:in `instance_exec'
+activesupport (6.0.5) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+activesupport (6.0.5) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.5) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.5) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.5) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.5) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:04:57 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:27:in `block in create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "address", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "João Carlos Alves Rodrigues"], ["email", "joao.email.com.br"], ["password", "123456789"], ["address", "Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ"], ["phone", "21999999999"], ["created_at", "2022-05-25 03:04:57.930321"], ["updated_at", "2022-05-25 03:04:57.930321"]]
+  ↳ app/controllers/users_controller.rb:27:in `block in create'
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:27:in `block in create'
+Redirected to 
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 4.9ms | Allocations: 40253)
+
+
+  
+NoMethodError (undefined method `flash' for #<ActionDispatch::Request:0x000055c5b4ae47f8>):
+  
+app/controllers/users_controller.rb:28:in `block (2 levels) in create'
+app/controllers/users_controller.rb:26:in `create'
+Started GET "/users" for 127.0.0.1 at 2022-05-25 00:05:25 -0300
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 1671)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-05-25 00:05:39 -0300
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 160)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:05:51 -0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:27:in `block in create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "address", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "João Carlos Alves Rodrigues"], ["email", "joao.email.com.br"], ["password", "123456789"], ["address", "Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ"], ["phone", "21999999999"], ["created_at", "2022-05-25 03:05:51.848801"], ["updated_at", "2022-05-25 03:05:51.848801"]]
+  ↳ app/controllers/users_controller.rb:27:in `block in create'
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:27:in `block in create'
+Redirected to 
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 5.7ms | Allocations: 34954)
+
+
+  
+NoMethodError (undefined method `flash' for #<ActionDispatch::Request:0x00007fb6f800d758>):
+  
+app/controllers/users_controller.rb:28:in `block (2 levels) in create'
+app/controllers/users_controller.rb:26:in `create'
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:08:32 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ArgumentError (Before process_action callback :verify_authenticity_token has not been defined):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:08:51 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.6ms | Allocations: 35361)
+
+
+  
+NoMethodError (undefined method `respond_to' for #<UsersController:0x00007fcbb05b8dc0>
+Did you mean?  respond_to?):
+  
+app/controllers/users_controller.rb:26:in `create'
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:09:41 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `protect_from_forgery' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:10:31 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.7ms | Allocations: 35355)
+
+
+  
+NoMethodError (undefined method `respond_to' for #<UsersController:0x00007f9e98c74c30>
+Did you mean?  respond_to?):
+  
+app/controllers/users_controller.rb:26:in `create'
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:11:50 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/renata/Ruby/club-api/app/controllers/users_controller.rb:19: formal argument cannot be a constant
+  def editclass UsersController < ApplicationController
+                ^~~~~~~~~~~~~~~
+/home/renata/Ruby/club-api/app/controllers/users_controller.rb:19: syntax error, unexpected '<', expecting ';' or '\n'
+...def editclass UsersController < ApplicationController
+...                              ^
+/home/renata/Ruby/club-api/app/controllers/users_controller.rb:71: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+app/controllers/users_controller.rb:19: formal argument cannot be a constant
+app/controllers/users_controller.rb:19: syntax error, unexpected '<', expecting ';' or '\n'
+app/controllers/users_controller.rb:71: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:19: formal argument cannot be a constant
+app/controllers/users_controller.rb:19: syntax error, unexpected '<', expecting ';' or '\n'
+app/controllers/users_controller.rb:71: syntax error, unexpected `end', expecting end-of-input
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:17:22 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/renata/Ruby/club-api/app/controllers/users_controller.rb:19: formal argument cannot be a constant
+  def editclass UsersController < ApplicationController
+                ^~~~~~~~~~~~~~~
+/home/renata/Ruby/club-api/app/controllers/users_controller.rb:19: syntax error, unexpected '<', expecting ';' or '\n'
+...def editclass UsersController < ApplicationController
+...                              ^
+/home/renata/Ruby/club-api/app/controllers/users_controller.rb:71: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+app/controllers/users_controller.rb:19: formal argument cannot be a constant
+app/controllers/users_controller.rb:19: syntax error, unexpected '<', expecting ';' or '\n'
+app/controllers/users_controller.rb:71: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:19: formal argument cannot be a constant
+app/controllers/users_controller.rb:19: syntax error, unexpected '<', expecting ';' or '\n'
+app/controllers/users_controller.rb:71: syntax error, unexpected `end', expecting end-of-input
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:18:55 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/renata/Ruby/club-api/app/controllers/users_controller.rb:71: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+app/controllers/users_controller.rb:71: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:71: syntax error, unexpected `end', expecting end-of-input
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:19:21 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/renata/Ruby/club-api/app/controllers/users_controller.rb:71: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+app/controllers/users_controller.rb:71: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:71: syntax error, unexpected `end', expecting end-of-input
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:19:47 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/renata/Ruby/club-api/app/controllers/users_controller.rb:135: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/users_controller.rb:135: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:135: syntax error, unexpected `end', expecting end-of-input
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:25:04 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/renata/Ruby/club-api/app/controllers/users_controller.rb:138: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/users_controller.rb:138: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:138: syntax error, unexpected `end', expecting end-of-input
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:28:06 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.4ms | Allocations: 198)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: users):
+  
+app/controllers/users_controller.rb:49:in `users_params'
+app/controllers/users_controller.rb:18:in `create'
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:28:53 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.3ms | Allocations: 59847)
+
+
+  
+NameError (undefined local variable or method `users_params' for #<UsersController:0x00007f1ee4c74b38>
+Did you mean?  user_params):
+  
+app/controllers/users_controller.rb:18:in `create'
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:29:37 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.2ms | Allocations: 59848)
+
+
+  
+NameError (undefined local variable or method `users_params' for #<UsersController:0x0000558c383d3640>
+Did you mean?  user_params):
+  
+app/controllers/users_controller.rb:18:in `create'
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:30:29 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 5043)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/users_controller.rb:20:in `create'
+Started POST "/users" for 127.0.0.1 at 2022-05-25 00:39:22 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999", "user"=>{"name"=>"João Carlos Alves Rodrigues", "email"=>"joao.email.com.br", "password"=>"[FILTERED]", "address"=>"Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ", "phone"=>"21999999999"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "address", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "João Carlos Alves Rodrigues"], ["email", "joao.email.com.br"], ["password", "123456789"], ["address", "Rua 2, 3, Algum Bairro, Rio de Janeiro - RJ"], ["phone", "21999999999"], ["created_at", "2022-05-25 03:39:22.285313"], ["updated_at", "2022-05-25 03:39:22.285313"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 17ms (Views: 0.7ms | ActiveRecord: 5.1ms | Allocations: 8544)
+
+
+Started POST "/sports" for 127.0.0.1 at 2022-05-25 00:47:02 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SportsController#create as */*
+  Parameters: {"name"=>"volei", "sport"=>{"name"=>"volei"}}
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.4ms | Allocations: 32800)
+
+
+  
+NoMethodError (undefined method `respond_to' for #<SportsController:0x00005574637f9d88>
+Did you mean?  respond_to?):
+  
+app/controllers/sports_controller.rb:26:in `create'
